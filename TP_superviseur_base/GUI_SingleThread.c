@@ -5,12 +5,28 @@
 
 #include "stm32f7xx_hal.h"
 #include "stm32746g_discovery_sdram.h"
+
+#include "stm32f7xx_hal.h"
+#include "stm32746g_discovery_sdram.h"
 #include "RTE_Components.h"
 #include "cmsis_os.h"                   // ARM::CMSIS:RTOS:Keil RTX
 #include "Board_Touch.h"                // ::Board Support:Touchscreen
 #include "GUI.h"
 #include "stdio.h"
 #include "DIALOG.h"
+#include "Board_LED.h"                  // ::Board Support:LED
+#include "Driver_USART.h"               // ::CMSIS Driver:USART
+
+
+	char tab[1];
+	char couple, vitesse, reservoir;
+	char etat;
+	
+	WM_HWIN Rdlg;
+	
+extern ARM_DRIVER_USART Driver_USART7;
+
+
 
 #ifdef RTE_CMSIS_RTOS_RTX
 extern uint32_t os_time;
@@ -44,6 +60,7 @@ int Init_GUIThread (void) {
   
   return(0);
 }
+
 
 
 /**
@@ -158,10 +175,94 @@ void GUIThread (void const *argument) {
 		
 		// mises à jour affichage
 		GUI_Exec();
+		
+		Driver_USART7.Receive(tab,1);		// A mettre ds boucle pour recevoir
+		osSignalWait(0x02, osWaitForever);	// sommeil attente fin de reception
+			
+			switch (tab[0] & 0xC0)
+			{
+				case 0x00:
+					couple = (tab[0]&0x0F)*100/64;
+					break;
+				case 0x40:
+					vitesse = (tab[0]&0x0F)*100/64;
+					break;
+				case 0x80:
+					reservoir = (tab[0]&0x0F)*100/64;
+					break;			
+			}
+			couple = 50;
+			WM_SendMessageNoPara(Rdlg, WM_USER);
+		
 		GUI_Delay(10);
 		GUI_X_ExecIdle();             /* Nothing left to do for the moment ... Idle processing */
   }
 }
+
+
+
+//void UART_threadR (void const *argument);                             // thread function Transmit
+//osThreadId ID_UART_threadR;                                          // thread id
+//osThreadDef (UART_threadR, osPriorityNormal, 1, 0);                   // thread object
+
+
+void usart_cb(uint32_t event)
+{
+	switch (event) {
+		
+		case ARM_USART_EVENT_RECEIVE_COMPLETE : 	
+			osSignalSet(tid_GUIThread, 0x02);
+			break;
+		
+		//case ARM_USART_EVENT_SEND_COMPLETE  : 	
+		//	osSignalSet(ID_UART_threadR, 0x02);
+		//	break;
+		
+		default : 
+			break;
+	}
+}
+
+void Init_UART(void){
+	Driver_USART7.Initialize(usart_cb);
+	Driver_USART7.PowerControl(ARM_POWER_FULL);
+	Driver_USART7.Control(	ARM_USART_MODE_ASYNCHRONOUS |
+							ARM_USART_DATA_BITS_8		|
+							ARM_USART_STOP_BITS_1		|
+							ARM_USART_PARITY_NONE		|
+							ARM_USART_FLOW_CONTROL_NONE,
+							9600);
+	Driver_USART7.Control(ARM_USART_CONTROL_TX,1);
+	Driver_USART7.Control(ARM_USART_CONTROL_RX,1);
+}
+
+// Tache reception UART
+//void UART_threadR (void const *argument) {
+
+
+//	while (1) 
+//		{
+//		
+//			Driver_USART7.Receive(tab,1);		// A mettre ds boucle pour recevoir
+//			osSignalWait(0x02, osWaitForever);	// sommeil attente fin de reception
+//			
+//			switch (tab[0] & 0xC0)
+//			{
+//				case 0x00:
+//					couple = (tab[0]&0x0F)*100/64;
+//					break;
+//				case 0x40:
+//					vitesse = (tab[0]&0x0F)*100/64;
+//					break;
+//				case 0x80:
+//					reservoir = (tab[0]&0x0F)*100/64;
+//					break;			
+//			}
+//			couple = 50;
+//			//WM_SendMessageNoPara(Rdlg, WM_USER);
+//		}
+//}
+
 
 /*********************************************************************
 *
@@ -171,9 +272,12 @@ int main (void) {
 	osKernelInitialize ();                    // initialize CMSIS-RTOS
 
   // initialize peripherals here
+	Init_UART();
+	
 	
   // create 'thread' functions that start executing,
   Init_GUIThread();
+	//ID_UART_threadR = osThreadCreate (osThread(UART_threadR), NULL);
 
   osKernelStart ();                         // start thread execution 
 	

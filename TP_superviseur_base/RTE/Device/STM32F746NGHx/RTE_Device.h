@@ -49,7 +49,7 @@
 #define RTE_USART1                      0
 
 //   <o> USART1_TX Pin <0=>Not Used <1=>PA9 <2=>PB6 <3=>PB14
-#define RTE_USART1_TX_ID                0
+#define RTE_USART1_TX_ID                2
 #if    (RTE_USART1_TX_ID == 0)
 #define RTE_USART1_TX                   0
 #elif  (RTE_USART1_TX_ID == 1)
@@ -69,7 +69,7 @@
 #endif
 
 //   <o> USART1_RX Pin <0=>Not Used <1=>PA10 <2=>PB7 <3=>PB15
-#define RTE_USART1_RX_ID                0
+#define RTE_USART1_RX_ID                2
 #if    (RTE_USART1_RX_ID == 0)
 #define RTE_USART1_RX                   0
 #elif  (RTE_USART1_RX_ID == 1)
@@ -771,10 +771,10 @@
 
 // <e> UART7 (Universal asynchronous receiver transmitter) [Driver_USART7]
 // <i> Configuration settings for Driver_USART7 in component ::CMSIS Driver:USART
-#define RTE_UART7                       0
+#define RTE_UART7                       1
 
 //   <o> UART7_TX Pin <0=>Not Used <1=>PF7 <2=>PE8 <3=>PA15 <4=>PB4
-#define RTE_UART7_TX_ID                 0
+#define RTE_UART7_TX_ID                 1
 #if    (RTE_UART7_TX_ID == 0)
 #define RTE_UART7_TX                    0
 #elif  (RTE_UART7_TX_ID == 1)
@@ -798,7 +798,7 @@
 #endif
 
 //   <o> UART7_RX Pin <0=>Not Used <1=>PF6 <2=>PE7 <3=>PA8 <4=>PB3
-#define RTE_UART7_RX_ID                 0
+#define RTE_UART7_RX_ID                 1
 #if    (RTE_UART7_RX_ID == 0)
 #define RTE_UART7_RX                    0
 #elif  (RTE_UART7_RX_ID == 1)
@@ -2643,7 +2643,7 @@
 
 // <e> CAN1 (Controller Area Network 1) [Driver_CAN1]
 // <i> Configuration settings for Driver_CAN1 in component ::CMSIS Driver:CAN
-#define RTE_CAN1                        0
+#define RTE_CAN1                        1
 
 //   <o> CAN1_RX Pin <0=>PA11 <1=>PB8 <2=>PD0 <3=>PI9 <4=>PH14
 #define RTE_CAN1_RX_PORT_ID             0
