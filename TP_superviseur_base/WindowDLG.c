@@ -1229,7 +1229,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
 					hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_0);
-		PROGBAR_SetValue    (hItem, couple);
+					PROGBAR_SetValue    (hItem, vitesse);
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
