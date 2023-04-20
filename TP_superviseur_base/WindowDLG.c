@@ -1050,6 +1050,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
 	extern char vitesse;
 	extern char reservoir;
 	extern int temperature;
+	extern char feux;
   // USER END
 
   switch (pMsg->MsgId) {
@@ -1232,7 +1233,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
-
+				feux = 0x01;
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -1247,6 +1248,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+				feux = 0x02;	
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -1261,6 +1263,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+				feux = 0x04;
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:
@@ -1275,6 +1278,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+				feux = 0x08;
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:

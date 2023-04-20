@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Example.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Example.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Thu Apr 20 17:17:38 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Thu Apr 20 17:27:32 2023
 <BR><P>
 <H3>Maximum Stack Usage =        696 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -29,7 +29,7 @@ Mutually Recursive functions
  <LI><a href="#[28]">UsageFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[28]">UsageFault_Handler</a><BR>
  <LI><a href="#[2a]">DebugMon_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[2a]">DebugMon_Handler</a><BR>
  <LI><a href="#[3f]">ADC_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3f]">ADC_IRQHandler</a><BR>
- <LI><a href="#[3b3]">WM_SendToParent</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3d9]">WM__SendMessage</a><BR>
+ <LI><a href="#[1b6]">WM_DefaultProc</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3b3]">WM_SendToParent</a><BR>
  <LI><a href="#[3ed]">WM__InvalidateRect</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3ed]">WM__InvalidateRect</a><BR>
  <LI><a href="#[3d4]">WM_InvalidateWindowAndDescsEx</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3d4]">WM_InvalidateWindowAndDescsEx</a><BR>
  <LI><a href="#[3ce]">WM__InvalidateDrawAndDescs</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3ce]">WM__InvalidateDrawAndDescs</a><BR>
@@ -985,9 +985,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[194]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
+<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CopyBuffer
+<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
 <LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CopyBuffer
 <LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDataBlock
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitmap
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memmove
@@ -1013,14 +1013,14 @@ Global Symbols
 <P><STRONG><a name="[192]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SaveContext_W
+<BR>[Called By]<UL><LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ConfigLayer
+<LI><a href="#[2b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SaveContext_W
 <LI><a href="#[2b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_RestoreContext
 <LI><a href="#[373]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_CreateUser
 <LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_CreateUser
 <LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateUser
 <LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITASK_CopyContext
 <LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_EnlargeBlocks
-<LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ConfigLayer
 <LI><a href="#[411]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitLine32BPP_DDB
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memmove_w
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
@@ -1041,9 +1041,9 @@ Global Symbols
 <P><STRONG><a name="[25d]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbTimer
+<BR>[Called By]<UL><LI><a href="#[38e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initialize
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbTimer
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_StartTimer
-<LI><a href="#[38e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Initialize
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF__DrawFromFilePointer
 <LI><a href="#[40c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitmap_RGB
 <LI><a href="#[40a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitmap_Pal
@@ -1187,28 +1187,28 @@ Global Symbols
 <P><STRONG><a name="[94]"></a>BUTTON_Callback</STRONG> (Thumb, 216 bytes, Stack size 16 bytes, button.o(i.BUTTON_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = BUTTON_Callback &rArr; WIDGET_HandleActive &rArr; WM__UpdateChildPositions &rArr; WM_MoveWindow &rArr; WM__MoveWindow &rArr; _MoveDescendents &rArr;  _MoveDescendents (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
+<BR>[Calls]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
+<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
 <LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetPressed
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtrArray
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
-<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> button.o(i.BUTTON_CreateUser)
 </UL>
 <P><STRONG><a name="[f7]"></a>BUTTON_CreateIndirect</STRONG> (Thumb, 68 bytes, Stack size 40 bytes, button_createindirect.o(i.BUTTON_CreateIndirect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = BUTTON_CreateIndirect &rArr; BUTTON_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = BUTTON_CreateIndirect &rArr; BUTTON_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateUser
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
+<BR>[Calls]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
+<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateUser
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> windowdlg.o(.constdata)
 </UL>
 <P><STRONG><a name="[1b7]"></a>BUTTON_CreateUser</STRONG> (Thumb, 116 bytes, Stack size 56 bytes, button.o(i.BUTTON_CreateUser))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = BUTTON_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = BUTTON_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__Init
@@ -1268,7 +1268,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1d0]"></a>CreateWindow</STRONG> (Thumb, 32 bytes, Stack size 24 bytes, windowdlg.o(i.CreateWindow))
-<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = CreateWindow &rArr; GUI_CreateDialogBox &rArr; WM_SetFocusOnNextChild &rArr; _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = CreateWindow &rArr; GUI_CreateDialogBox &rArr; WM_SetFocusOnNextChild &rArr; _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDesktopWindow
 <LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
@@ -1392,9 +1392,9 @@ Global Symbols
 <P><STRONG><a name="[136]"></a>GUIMONO_DispChar</STRONG> (Thumb, 302 bytes, Stack size 104 bytes, gui_charm.o(i.GUIMONO_DispChar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = GUIMONO_DispChar &rArr; LCD_DrawBitmap &rArr; LCD_FillRect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
+<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> f6x8.o(.constdata)
 </UL>
@@ -1410,10 +1410,10 @@ Global Symbols
 <P><STRONG><a name="[13a]"></a>GUIPROP_DispChar</STRONG> (Thumb, 198 bytes, Stack size 56 bytes, gui_charp.o(i.GUIPROP_DispChar))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = GUIPROP_DispChar &rArr; LCD_DrawBitmap &rArr; LCD_FillRect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
-<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
+<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
+<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 <LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetColor
 <LI><a href="#[1ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBkColor
 <LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP__FindChar
@@ -1464,10 +1464,10 @@ Global Symbols
 <P><STRONG><a name="[1ef]"></a>GUITASK_Init</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, gui_task.o(i.GUITASK_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = GUITASK_Init &rArr; GUI_ALLOC_GetFixedBlock &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__memset
+<BR>[Calls]<UL><LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_InitOS
+<LI><a href="#[1f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__memset
 <LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__RegisterExit
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_GetFixedBlock
-<LI><a href="#[1f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_InitOS
 <LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetTaskNo
 </UL>
 <BR>[Called By]<UL><LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__Config
@@ -1562,9 +1562,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[22e]"></a>GUI_ALLOC_FreeFixedBlock</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gui_alloc.o(i.GUI_ALLOC_FreeFixedBlock))
-<BR><BR>[Called By]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Delete
+<BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnExit
+<LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Delete
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnExit
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnExit
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnExit
 </UL>
 
@@ -1598,11 +1598,11 @@ Global Symbols
 <LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitOnce
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_AddFreeMemory
 </UL>
-<BR>[Called By]<UL><LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Create
+<BR>[Called By]<UL><LI><a href="#[3fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitOnce
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitColors
+<LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Create
 <LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITASK_Init
 <LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetAlphaBuffer
-<LI><a href="#[3fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitOnce
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitColors
 </UL>
 
 <P><STRONG><a name="[206]"></a>GUI_ALLOC_GetMaxSize</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, gui_alloc.o(i.GUI_ALLOC_GetMaxSize))
@@ -1616,9 +1616,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[209]"></a>GUI_ALLOC_GetSize</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gui_alloc.o(i.GUI_ALLOC_GetSize))
-<BR><BR>[Called By]<UL><LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
+<BR><BR>[Called By]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
 <LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
 </UL>
 
 <P><STRONG><a name="[234]"></a>GUI_ALLOC_Lock</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, gui_alloc.o(i.GUI_ALLOC_Lock))
@@ -1628,7 +1628,19 @@ Global Symbols
 <P><STRONG><a name="[1af]"></a>GUI_ALLOC_LockH</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gui_alloc.o(i.GUI_ALLOC_LockH))
 <BR><BR>[Calls]<UL><LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
+<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
+<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
+<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
+<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
+<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
+<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
+<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
+<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
 <LI><a href="#[3b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetClientRectEx
 <LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Paint1
@@ -1704,18 +1716,6 @@ Global Symbols
 <LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateUser
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
-<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
-<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
-<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
-<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
-<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
-<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF_GetImageInfoEx
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetValue
 <LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_NextPixel_Start
@@ -1805,7 +1805,19 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1b0]"></a>GUI_ALLOC_UnlockH</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, gui_alloc.o(i.GUI_ALLOC_UnlockH))
-<BR><BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
+<BR><BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
+<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
+<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
+<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
+<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
+<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
+<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
+<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
+<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
 <LI><a href="#[3b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetClientRectEx
 <LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Paint1
@@ -1880,18 +1892,6 @@ Global Symbols
 <LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateUser
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
-<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
-<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
-<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
-<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
-<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
-<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF_GetImageInfoEx
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetValue
 <LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_NextPixel_End
@@ -1952,7 +1952,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[207]"></a>GUI_ALLOC_h2p</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, gui_alloc.o(i.GUI_ALLOC_h2p))
-<BR><BR>[Called By]<UL><LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageNoPara
+<BR><BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageNoPara
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
 <LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DeleteAssocTimer
@@ -1980,7 +1981,6 @@ Global Symbols
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateStaticDevice
 <LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindowAndDescs
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetLastSibling
@@ -2129,18 +2129,20 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[221]"></a>GUI_ClearRect</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, gui_core.o(i.GUI_ClearRect), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
+<BR><BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 </UL>
 
 <P><STRONG><a name="[1d2]"></a>GUI_CreateDialogBox</STRONG> (Thumb, 172 bytes, Stack size 32 bytes, dialog.o(i.GUI_CreateDialogBox))
-<BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = GUI_CreateDialogBox &rArr; WM_SetFocusOnNextChild &rArr; _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = GUI_CreateDialogBox &rArr; WM_SetFocusOnNextChild &rArr; _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ShowWindow
+<BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDesktopWindow
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
+<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ShowWindow
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocusOnNextChild
 <LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetFocussedWindow
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientWindow
@@ -2149,8 +2151,6 @@ Global Symbols
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDesktopWindow
-<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CreateWindow
 </UL>
@@ -2183,9 +2183,9 @@ Global Symbols
 <P><STRONG><a name="[22c]"></a>GUI_DEVICE_Link</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, gui_device.o(i.GUI_DEVICE_Link))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GUI_DEVICE_Link
 </UL>
-<BR>[Called By]<UL><LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Select
+<BR>[Called By]<UL><LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_CreateAndLink
+<LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Select
 <LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_LinkDevices
-<LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_CreateAndLink
 </UL>
 
 <P><STRONG><a name="[22f]"></a>GUI_DEVICE_LinkDevices</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, gui_device.o(i.GUI_DEVICE_LinkDevices))
@@ -2211,12 +2211,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[289]"></a>GUI_DEVICE__GetpDriver</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, gui_device.o(i.GUI_DEVICE__GetpDriver))
-<BR><BR>[Called By]<UL><LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetPosEx
-<LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetPosEx
-<LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SelectLayer
-<LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Init
-<LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetVSizeEx
+<BR><BR>[Called By]<UL><LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetVSizeEx
 <LI><a href="#[344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetVRAMAddrEx
 <LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetSizeEx
 <LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDevFunc
@@ -2226,6 +2221,11 @@ Global Symbols
 <LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetLUTEntryEx
 <LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetNumLayers
 <LI><a href="#[33f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitLUT
+<LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetPosEx
+<LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetPosEx
+<LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SelectLayer
+<LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Init
+<LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[2ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__ManageCacheEx
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_CreateEx
 <LI><a href="#[3fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateBuffer
@@ -2243,13 +2243,13 @@ Global Symbols
 <P><STRONG><a name="[1fc]"></a>GUI_Delay</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, gui_time.o(i.GUI_Delay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 696<LI>Call Chain = GUI_Delay &rArr; GUI_Exec &rArr; GUI_Exec1 &rArr; WM_Exec &rArr; _DrawNext &rArr; WM__Paint &rArr; GUI_MEMDEV_Draw &rArr; GUI_MEMDEV_CopyToLCD &rArr; GUI_MEMDEV_CopyToLCDAt &rArr; GUI_MEMDEV__WriteToActiveOpaque &rArr; _WriteToActiveOpaque_8 &rArr; GUI_ALLOC_AllocNoInit &rArr; _Alloc &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
+<BR>[Calls]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Exec
+<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_GetTime
+<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Delay
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Unlock
 <LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Lock
-<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Exec
-<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_GetTime
-<LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIThread
 </UL>
@@ -2276,8 +2276,8 @@ Global Symbols
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_DrawSkinFlex
-<LI><a href="#[457]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_error
+<BR>[Called By]<UL><LI><a href="#[457]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_error
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_DrawSkinFlex
 </UL>
 
 <P><STRONG><a name="[1ca]"></a>GUI_DispStringInRect</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, gui_dispstringinrect.o(i.GUI_DispStringInRect))
@@ -2382,12 +2382,12 @@ Global Symbols
 <P><STRONG><a name="[1c2]"></a>GUI_DrawRect</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, gui_2dlib.o(i.GUI_DrawRect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = GUI_DrawRect &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawVLine
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawVLine
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_DrawSkinFlex
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawUpRect
@@ -2397,11 +2397,11 @@ Global Symbols
 <P><STRONG><a name="[1c0]"></a>GUI_DrawVLine</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, gui_drawvline.o(i.GUI_DrawVLine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = GUI_DrawVLine &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawVLine
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawVLine
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_DrawSkinFlex
 <LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_DrawSkinFlex
@@ -2432,11 +2432,11 @@ Global Symbols
 <P><STRONG><a name="[1c1]"></a>GUI_FillRect</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, gui_fillrect.o(i.GUI_FillRect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = GUI_FillRect &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_DrawSkinFlex
 <LI><a href="#[374]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawShaftV
@@ -2454,7 +2454,8 @@ Global Symbols
 <P><STRONG><a name="[24f]"></a>GUI_GIF_DrawSubEx</STRONG> (Thumb, 190 bytes, Stack size 80 bytes, gui_gif.o(i.GUI_GIF_DrawSubEx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = GUI_GIF_DrawSubEx &rArr; GUI_GIF__DrawFromFilePointer &rArr; _ReadExtension &rArr; _GetDataBlock &rArr; GUI_GIF__ReadData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
+<BR>[Calls]<UL><LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColorIndex
+<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
@@ -2462,7 +2463,6 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
-<LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColorIndex
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetColorIndex
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF__DrawFromFilePointer
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetImageDimension
@@ -2616,9 +2616,9 @@ Global Symbols
 <P><STRONG><a name="[1ed]"></a>GUI_GetBkColor</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, gui_getcolor.o(i.GUI_GetBkColor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GUI_GetBkColor &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
+<BR>[Calls]<UL><LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Index2Color
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
-<LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Index2Color
 <LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetBkColorIndex
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
@@ -2657,9 +2657,9 @@ Global Symbols
 <P><STRONG><a name="[1ec]"></a>GUI_GetColor</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, gui_getcolor.o(i.GUI_GetColor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GUI_GetColor &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
+<BR>[Calls]<UL><LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Index2Color
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
-<LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Index2Color
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetColorIndex
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
@@ -2769,15 +2769,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1f9]"></a>GUI_Init</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, gui_core.o(i.GUI_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = GUI_Init &rArr; WM_Init &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = GUI_Init &rArr; WM_Init &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Init
+<BR>[Calls]<UL><LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Init
+<LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Init
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetOrg
 <LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITASK_CopyContext
 <LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__Config
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitContext
-<LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIThread
 </UL>
@@ -2785,13 +2785,29 @@ Global Symbols
 <P><STRONG><a name="[1b9]"></a>GUI_Lock</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, gui_task.o(i.GUI_Lock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_UnlinkTaskDevices
-<LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_LinkDevices
-<LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Lock
+<BR>[Calls]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Lock
 <LI><a href="#[27e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_GetTaskId
+<LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_UnlinkTaskDevices
+<LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_LinkDevices
 <LI><a href="#[1f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetTaskNo
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DeleteAssocTimer
+<BR>[Called By]<UL><LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetLayerPosEx
+<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetDrawMode
+<LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDialogItem
+<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
+<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
+<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
+<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
+<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
+<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
+<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
+<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Delay
+<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
+<LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DeleteAssocTimer
 <LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
 <LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetFirstChild
 <LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
@@ -2858,22 +2874,6 @@ Global Symbols
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
-<LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDialogItem
-<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
-<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
-<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
-<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
-<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Delay
-<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
-<LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetLayerPosEx
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetDrawMode
 <LI><a href="#[2b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_OnKey
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF_GetImageInfoEx
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetValue
@@ -3029,15 +3029,15 @@ Global Symbols
 <P><STRONG><a name="[28f]"></a>GUI_MEMDEV_Draw</STRONG> (Thumb, 320 bytes, Stack size 64 bytes, guidev_banding.o(i.GUI_MEMDEV_Draw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = GUI_MEMDEV_Draw &rArr; GUI_MEMDEV_CopyToLCD &rArr; GUI_MEMDEV_CopyToLCDAt &rArr; GUI_MEMDEV__WriteToActiveOpaque &rArr; _WriteToActiveOpaque_8 &rArr; GUI_ALLOC_AllocNoInit &rArr; _Alloc &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageNoPara
+<BR>[Calls]<UL><LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSizeEx
+<LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSizeEx
+<LI><a href="#[293]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetVYSizeEx
+<LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetVXSizeEx
+<LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageNoPara
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_SetOrg
 <LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Select
 <LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Delete
 <LI><a href="#[280]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Clear
-<LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSizeEx
-<LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSizeEx
-<LI><a href="#[293]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetVYSizeEx
-<LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetVXSizeEx
 <LI><a href="#[297]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_ReduceYSize
 <LI><a href="#[295]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_GetYSize
 <LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetOrg
@@ -3051,11 +3051,11 @@ Global Symbols
 <P><STRONG><a name="[299]"></a>GUI_MEMDEV_GetBitsPerPixel</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, guidev.o(i.GUI_MEMDEV_GetBitsPerPixel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = GUI_MEMDEV_GetBitsPerPixel &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
+<BR>[Calls]<UL><LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD__GetBPPDevice
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD__GetBPPDevice
 </UL>
 <BR>[Called By]<UL><LI><a href="#[285]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__WriteToActiveOpaque
 </UL>
@@ -3128,14 +3128,14 @@ Global Symbols
 <P><STRONG><a name="[286]"></a>GUI_MEMDEV_Select</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, guidev.o(i.GUI_MEMDEV_Select))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = GUI_MEMDEV_Select &rArr; WM_Deactivate &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Deactivate
+<BR>[Calls]<UL><LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
+<LI><a href="#[2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Deactivate
 <LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SelectLCD
 <LI><a href="#[22c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Link
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
 <LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_UpdateColorIndices
 </UL>
 <BR>[Called By]<UL><LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
@@ -3148,11 +3148,11 @@ Global Symbols
 <P><STRONG><a name="[298]"></a>GUI_MEMDEV_SetOrg</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, guidev_setorg.o(i.GUI_MEMDEV_SetOrg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = GUI_MEMDEV_SetOrg &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
+<BR>[Calls]<UL><LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
 </UL>
 <BR>[Called By]<UL><LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
@@ -3186,7 +3186,8 @@ Global Symbols
 <P><STRONG><a name="[28a]"></a>GUI_MEMDEV__CreateFixed</STRONG> (Thumb, 238 bytes, Stack size 64 bytes, guidev.o(i.GUI_MEMDEV__CreateFixed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = GUI_MEMDEV__CreateFixed &rArr; GUI_USAGE_BM_Create &rArr; GUI_ALLOC_AllocZero &rArr; GUI_ALLOC_AllocNoInit &rArr; _Alloc &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
+<BR>[Calls]<UL><LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD__GetBPPDevice
+<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Delete
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Create
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
@@ -3194,7 +3195,6 @@ Global Symbols
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD__GetBPPDevice
 <LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_BM_Create
 </UL>
 <BR>[Called By]<UL><LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_CreateFixed
@@ -3205,11 +3205,11 @@ Global Symbols
 <P><STRONG><a name="[d8]"></a>GUI_MEMDEV__WriteToActiveAlpha</STRONG> (Thumb, 386 bytes, Stack size 104 bytes, guidev_writetoactivealpha.o(i.GUI_MEMDEV__WriteToActiveAlpha))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = GUI_MEMDEV__WriteToActiveAlpha &rArr; GUI__DoAlphaBlending &rArr; GUI__GetAlphaBuffer &rArr; GUI_ALLOC_GetFixedBlock &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
+<BR>[Calls]<UL><LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
+<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[2a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DoAlphaBlending
 <LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__AllocAlphaBuffer
-<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_GetDataPtr
 <LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__CompactPixelIndicesEx
 </UL>
@@ -3243,8 +3243,8 @@ Global Symbols
 <P><STRONG><a name="[36e]"></a>GUI_MergeRect</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, gui_mergerect.o(i.GUI_MergeRect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GUI_MergeRect
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Invalidate1Abs
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<BR>[Called By]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[3d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Invalidate1Abs
 <LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ResizeWindow
 </UL>
 
@@ -3277,7 +3277,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[2b0]"></a>GUI_PollKeyMsg</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, gui_onkey.o(i.GUI_PollKeyMsg))
-<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = GUI_PollKeyMsg &rArr; WM_OnKey &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = GUI_PollKeyMsg &rArr; WM_OnKey &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
@@ -3381,12 +3381,12 @@ Global Symbols
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_SetDefault
+<BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
+<LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_SetDefault
 <LI><a href="#[3bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawNext
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_DrawSkinFlex
 <LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_DrawSkinFlex
 <LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_DrawSkinFlex
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
 <LI><a href="#[2e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawTwinArc4
 <LI><a href="#[376]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawThumbV
 <LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawThumbH
@@ -3415,9 +3415,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_SetDefault
+<BR>[Called By]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_SetDefault
 <LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_DrawSkinFlex
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
 <LI><a href="#[37c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
@@ -3505,8 +3505,8 @@ Global Symbols
 <P><STRONG><a name="[2bc]"></a>GUI_StoreKey</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, gui_onkey.o(i.GUI_StoreKey))
 <BR><BR>[Calls]<UL><LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SignalEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbBackWin
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<BR>[Called By]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbBackWin
 </UL>
 
 <P><STRONG><a name="[2bd]"></a>GUI_TIMER_Create</STRONG> (Thumb, 136 bytes, Stack size 32 bytes, gui_timer.o(i.GUI_TIMER_Create))
@@ -3710,7 +3710,23 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Unlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DeleteAssocTimer
+<BR>[Called By]<UL><LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetLayerPosEx
+<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetDrawMode
+<LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDialogItem
+<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
+<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
+<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
+<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
+<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
+<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
+<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
+<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
+<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Delay
+<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
+<LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DeleteAssocTimer
 <LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
 <LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetFirstChild
 <LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
@@ -3777,22 +3793,6 @@ Global Symbols
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
-<LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDialogItem
-<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
-<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
-<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
-<LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_GetValue
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
-<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Delay
-<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
-<LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetLayerPosEx
-<LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetDrawMode
 <LI><a href="#[2b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_OnKey
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF_GetImageInfoEx
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetValue
@@ -3899,8 +3899,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[233]"></a>GUI_X_GetTime</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gui_x_rte.o(i.GUI_X_GetTime))
-<BR><BR>[Called By]<UL><LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetTime
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Delay
+<BR><BR>[Called By]<UL><LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Delay
+<LI><a href="#[275]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetTime
 </UL>
 
 <P><STRONG><a name="[279]"></a>GUI_X_Init</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, gui_x_rte.o(i.GUI_X_Init))
@@ -3972,10 +3972,10 @@ Global Symbols
 <P><STRONG><a name="[278]"></a>GUI__Config</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, gui_core.o(i.GUI__Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = GUI__Config &rArr; LCD_X_Config &rArr; GUI_DEVICE_CreateAndLink &rArr; GUI_DEVICE_Create &rArr; GUI_ALLOC_GetFixedBlock &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITASK_Init
-<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__RegisterExit
+<BR>[Calls]<UL><LI><a href="#[2df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_X_Config
 <LI><a href="#[2d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_X_Config
-<LI><a href="#[2df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_X_Config
+<LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITASK_Init
+<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__RegisterExit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
 </UL>
@@ -4184,13 +4184,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1f0]"></a>GUI__RegisterExit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, gui_core.o(i.GUI__RegisterExit))
-<BR><BR>[Called By]<UL><LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TIMER_Create
+<BR><BR>[Called By]<UL><LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitColors
+<LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TIMER_Create
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Init
 <LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITASK_Init
 <LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__Config
 <LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitOnce
 <LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetAlphaBuffer
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitColors
 </UL>
 
 <P><STRONG><a name="[1ce]"></a>GUI__SetText</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, gui__settext.o(i.GUI__SetText))
@@ -4242,11 +4242,11 @@ Global Symbols
 <P><STRONG><a name="[1f2]"></a>GUI__memset</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, gui__memset.o(i.GUI__memset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GUI__memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
+<BR>[Called By]<UL><LI><a href="#[3fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitOnce
+<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITASK_Init
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnExit
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnExit
-<LI><a href="#[3fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitOnce
 <LI><a href="#[263]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF__GetNextByte
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateStaticDevice
 </UL>
@@ -4486,9 +4486,9 @@ Global Symbols
 <P><STRONG><a name="[306]"></a>HAL_LTDC_IRQHandler</STRONG> (Thumb, 268 bytes, Stack size 8 bytes, stm32f7xx_hal_ltdc.o(i.HAL_LTDC_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = HAL_LTDC_IRQHandler &rArr; HAL_LTDC_LineEventCallback &rArr; HAL_LTDC_SetAddress &rArr; LTDC_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[309]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ReloadEventCallback
+<BR>[Calls]<UL><LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_LineEventCallback
+<LI><a href="#[309]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ReloadEventCallback
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ErrorCallback
-<LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_LineEventCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LTDC_IRQHandler
 </UL>
@@ -4504,9 +4504,9 @@ Global Symbols
 <P><STRONG><a name="[308]"></a>HAL_LTDC_LineEventCallback</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, lcdconf.o(i.HAL_LTDC_LineEventCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = HAL_LTDC_LineEventCallback &rArr; HAL_LTDC_SetAddress &rArr; LTDC_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_SetAddress
+<BR>[Calls]<UL><LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MULTIBUF_ConfirmEx
+<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_SetAddress
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ProgramLineEvent
-<LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MULTIBUF_ConfirmEx
 </UL>
 <BR>[Called By]<UL><LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_IRQHandler
 </UL>
@@ -4580,9 +4580,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1a9]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, stm32f7xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
-<BR><BR>[Called By]<UL><LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2Cx_MspInit
+<BR><BR>[Called By]<UL><LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_InitController
+<LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2Cx_MspInit
 <LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_SDRAM_MspInit
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_InitController
 </UL>
 
 <P><STRONG><a name="[1a8]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 124 bytes, Stack size 40 bytes, stm32f7xx_hal_cortex.o(i.HAL_NVIC_SetPriority))
@@ -4692,7 +4692,10 @@ Global Symbols
 <P><STRONG><a name="[a4]"></a>IMAGE_Callback</STRONG> (Thumb, 402 bytes, Stack size 56 bytes, image.o(i.IMAGE_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 480<LI>Call Chain = IMAGE_Callback &rArr; WIDGET_HandleActive &rArr; WM__UpdateChildPositions &rArr; WM_MoveWindow &rArr; WM__MoveWindow &rArr; _MoveDescendents &rArr;  _MoveDescendents (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetBkColor
+<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSize
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSize
+<LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetBkColor
 <LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Write
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_SetOrg
 <LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Select
@@ -4705,21 +4708,18 @@ Global Symbols
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
-<LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSize
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSize
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> image.o(i.IMAGE_CreateUser)
 </UL>
 <P><STRONG><a name="[f4]"></a>IMAGE_CreateIndirect</STRONG> (Thumb, 56 bytes, Stack size 40 bytes, image.o(i.IMAGE_CreateIndirect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = IMAGE_CreateIndirect &rArr; IMAGE_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = IMAGE_CreateIndirect &rArr; IMAGE_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_CreateUser
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> windowdlg.o(.constdata)
 </UL>
 <P><STRONG><a name="[328]"></a>IMAGE_CreateUser</STRONG> (Thumb, 168 bytes, Stack size 64 bytes, image.o(i.IMAGE_CreateUser))
-<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = IMAGE_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = IMAGE_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientRectEx
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
@@ -4770,10 +4770,10 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbTimer
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
+<BR>[Called By]<UL><LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbTimer
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
 </UL>
 
 <P><STRONG><a name="[32b]"></a>IMAGE__SetWindowSize</STRONG> (Thumb, 46 bytes, Stack size 32 bytes, image.o(i.IMAGE__SetWindowSize))
@@ -4862,13 +4862,13 @@ Global Symbols
 <P><STRONG><a name="[1ea]"></a>LCD_FillRect</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, lcd.o(i.LCD_FillRect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LCD_FillRect
 </UL>
-<BR>[Called By]<UL><LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_FillRect
+<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_FillRect
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMONO_DispChar
 <LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD__DrawBitmap_1bpp
 <LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
+<LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ClearUnusedPixels
 <LI><a href="#[40d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitmap_RLE
 <LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRect
@@ -5009,9 +5009,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDevProp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
-<LI><a href="#[2c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Calibrate
+<BR>[Called By]<UL><LI><a href="#[2c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Calibrate
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Exec
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateStaticDevice
 </UL>
 
@@ -5020,8 +5020,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDevProp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_InitController
+<BR>[Called By]<UL><LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_InitController
+<LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
 <LI><a href="#[42a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDeviceRect
 </UL>
 
@@ -5030,9 +5030,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDevProp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
-<LI><a href="#[2c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Calibrate
+<BR>[Called By]<UL><LI><a href="#[2c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Calibrate
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Exec
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateStaticDevice
 </UL>
 
@@ -5041,8 +5041,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDevProp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_InitController
+<BR>[Called By]<UL><LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_InitController
+<LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
 <LI><a href="#[42a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDeviceRect
 </UL>
 
@@ -5067,8 +5067,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Color2Index
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTableBM
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTable
+<BR>[Called By]<UL><LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTable
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTableBM
 </UL>
 
 <P><STRONG><a name="[33d]"></a>LCD_GetpfColor2IndexEx</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, lcd_getex.o(i.LCD_GetpfColor2IndexEx))
@@ -5117,13 +5117,13 @@ Global Symbols
 <P><STRONG><a name="[27b]"></a>LCD_Init</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, lcd.o(i.LCD_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = LCD_Init &rArr; LCD_InitColors &rArr; GUI_ALLOC_GetFixedBlock &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SelectLayer
-<LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE__GetpDriver
-<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[33f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitLUT
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitColors
 <LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
+<LI><a href="#[283]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SelectLayer
+<LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE__GetpDriver
+<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
 </UL>
@@ -5140,12 +5140,12 @@ Global Symbols
 <P><STRONG><a name="[33f]"></a>LCD_InitLUT</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, lcd_color.o(i.LCD_InitLUT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = LCD_InitLUT &rArr; LCD_SetLUTEntryEx
 </UL>
-<BR>[Calls]<UL><LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE__GetpDriver
-<LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetBitsPerPixelEx
+<BR>[Calls]<UL><LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetBitsPerPixelEx
 <LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetLUTEntryEx
 <LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetNumLayers
 <LI><a href="#[335]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetNumColorsEx
 <LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Index2Color
+<LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE__GetpDriver
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 </UL>
@@ -5153,8 +5153,8 @@ Global Symbols
 <P><STRONG><a name="[2b8]"></a>LCD_SelectLCD</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, lcd_selectlcd.o(i.LCD_SelectLCD))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LCD_SelectLCD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Unlink
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
+<BR>[Calls]<UL><LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
+<LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE_Unlink
 </UL>
 <BR>[Called By]<UL><LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SelectLCD
 </UL>
@@ -5198,8 +5198,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[253]"></a>LCD_SetColorIndex</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, lcd.o(i.LCD_SetColorIndex))
-<BR><BR>[Called By]<UL><LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF_DrawSubEx
-<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetColor
+<BR><BR>[Called By]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetColor
+<LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF_DrawSubEx
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawFromDataBlock
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ClearUnusedPixels
 <LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_UpdateColorIndices
@@ -5215,10 +5215,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1e8]"></a>LCD_SetDrawMode</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lcd.o(i.LCD_SetDrawMode))
-<BR><BR>[Called By]<UL><LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
-<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
+<BR><BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMONO_DispChar
+<LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
 <LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDrawMode
 </UL>
 
@@ -5282,9 +5282,7 @@ Global Symbols
 <P><STRONG><a name="[2df]"></a>LCD_X_Config</STRONG> (Thumb, 300 bytes, Stack size 16 bytes, lcdconf.o(i.LCD_X_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = LCD_X_Config &rArr; GUI_DEVICE_CreateAndLink &rArr; GUI_DEVICE_Create &rArr; GUI_ALLOC_GetFixedBlock &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_SetOrientation
-<LI><a href="#[2c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Calibrate
-<LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetVSizeEx
+<BR>[Calls]<UL><LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetVSizeEx
 <LI><a href="#[344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetVRAMAddrEx
 <LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetSizeEx
 <LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDevFunc
@@ -5300,6 +5298,8 @@ Global Symbols
 <LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUICC_M4444I_SetCustColorConv
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUICC_M1555I_SetCustColorConv
 <LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
+<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_SetOrientation
+<LI><a href="#[2c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_TOUCH_Calibrate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__Config
 </UL>
@@ -5392,23 +5392,23 @@ Global Symbols
 <P><STRONG><a name="[be]"></a>PROGBAR_Callback</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, progbar.o(i.PROGBAR_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = PROGBAR_Callback &rArr; WIDGET_HandleActive &rArr; WM__UpdateChildPositions &rArr; WM_MoveWindow &rArr; WM__MoveWindow &rArr; _MoveDescendents &rArr;  _MoveDescendents (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
+<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> progbar.o(i.PROGBAR_CreateUser)
 </UL>
 <P><STRONG><a name="[f8]"></a>PROGBAR_CreateIndirect</STRONG> (Thumb, 56 bytes, Stack size 40 bytes, progbar_createindirect.o(i.PROGBAR_CreateIndirect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = PROGBAR_CreateIndirect &rArr; PROGBAR_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = PROGBAR_CreateIndirect &rArr; PROGBAR_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_CreateUser
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> windowdlg.o(.constdata)
 </UL>
 <P><STRONG><a name="[366]"></a>PROGBAR_CreateUser</STRONG> (Thumb, 176 bytes, Stack size 56 bytes, progbar.o(i.PROGBAR_CreateUser))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = PROGBAR_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = PROGBAR_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetEffect
 <LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
@@ -5427,8 +5427,8 @@ Global Symbols
 <P><STRONG><a name="[12]"></a>PROGBAR_DrawSkinFlex</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, progbar_skinflex.o(i.PROGBAR_DrawSkinFlex))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = PROGBAR_DrawSkinFlex &rArr; _DrawBackground &rArr; GUI_DrawGradientH &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
-<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
+<BR>[Calls]<UL><LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
+<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetTextMode
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBackground
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawVLine
@@ -5483,25 +5483,25 @@ Global Symbols
 <P><STRONG><a name="[bf]"></a>SLIDER_Callback</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, slider.o(i.SLIDER_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = SLIDER_Callback &rArr; WIDGET_HandleActive &rArr; WM__UpdateChildPositions &rArr; WM_MoveWindow &rArr; WM__MoveWindow &rArr; _MoveDescendents &rArr;  _MoveDescendents (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Inc
+<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Inc
 <LI><a href="#[372]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Dec
 <LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> slider.o(i.SLIDER_CreateUser)
 </UL>
 <P><STRONG><a name="[f6]"></a>SLIDER_CreateIndirect</STRONG> (Thumb, 56 bytes, Stack size 40 bytes, slider_createindirect.o(i.SLIDER_CreateIndirect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = SLIDER_CreateIndirect &rArr; SLIDER_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = SLIDER_CreateIndirect &rArr; SLIDER_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[373]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_CreateUser
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> windowdlg.o(.constdata)
 </UL>
 <P><STRONG><a name="[373]"></a>SLIDER_CreateUser</STRONG> (Thumb, 144 bytes, Stack size 56 bytes, slider.o(i.SLIDER_CreateUser))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = SLIDER_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = SLIDER_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__Init
@@ -5515,7 +5515,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[372]"></a>SLIDER_Dec</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, slider.o(i.SLIDER_Dec))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = SLIDER_Dec &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = SLIDER_Dec &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
@@ -5563,7 +5563,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[371]"></a>SLIDER_Inc</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, slider.o(i.SLIDER_Inc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = SLIDER_Inc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = SLIDER_Inc &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
@@ -5588,7 +5588,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[37b]"></a>SLIDER_SetValue</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, slider.o(i.SLIDER_SetValue))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = SLIDER_SetValue &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = SLIDER_SetValue &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
@@ -5597,8 +5597,8 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbDialog
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbDialog
+<LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 </UL>
 
 <P><STRONG><a name="[90]"></a>SystemInit</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, system_stm32f7xx.o(i.SystemInit))
@@ -5607,25 +5607,25 @@ Global Symbols
 <P><STRONG><a name="[c0]"></a>TEXT_Callback</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, text.o(i.TEXT_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = TEXT_Callback &rArr; WIDGET_HandleActive &rArr; WM__UpdateChildPositions &rArr; WM_MoveWindow &rArr; WM__MoveWindow &rArr; _MoveDescendents &rArr;  _MoveDescendents (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 <LI><a href="#[37c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> text.o(i.TEXT_CreateUser)
 </UL>
 <P><STRONG><a name="[f5]"></a>TEXT_CreateIndirect</STRONG> (Thumb, 60 bytes, Stack size 48 bytes, text_createindirect.o(i.TEXT_CreateIndirect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = TEXT_CreateIndirect &rArr; TEXT_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = TEXT_CreateIndirect &rArr; TEXT_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[37d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_CreateUser
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> windowdlg.o(.constdata)
 </UL>
 <P><STRONG><a name="[37d]"></a>TEXT_CreateUser</STRONG> (Thumb, 152 bytes, Stack size 72 bytes, text.o(i.TEXT_CreateUser))
-<BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = TEXT_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = TEXT_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
@@ -5727,7 +5727,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gui_singlethread.o(.constdata)
 </UL>
-<P><STRONG><a name="[f2]"></a>UART_threadT</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, gui_singlethread.o(i.UART_threadT))
+<P><STRONG><a name="[f2]"></a>UART_threadT</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, gui_singlethread.o(i.UART_threadT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART_threadT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSignalWait
@@ -5757,9 +5757,9 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
+<BR>[Called By]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetPressed
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
 </UL>
 
 <P><STRONG><a name="[1ae]"></a>WIDGET_HandleActive</STRONG> (Thumb, 296 bytes, Stack size 32 bytes, widget.o(i.WIDGET_HandleActive))
@@ -5794,15 +5794,15 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WINDOW_Callback
+<BR>[Called By]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
+<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WINDOW_Callback
 <LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetPressed
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
-<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
 </UL>
 
 <P><STRONG><a name="[367]"></a>WIDGET_SetEffect</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, widget_seteffect.o(i.WIDGET_SetEffect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WIDGET_SetEffect &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WIDGET_SetEffect &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 </UL>
@@ -5853,7 +5853,8 @@ Global Symbols
 <P><STRONG><a name="[c1]"></a>WINDOW_Callback</STRONG> (Thumb, 270 bytes, Stack size 32 bytes, window.o(i.WINDOW_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = WINDOW_Callback &rArr; WIDGET_HandleActive &rArr; WM__UpdateChildPositions &rArr; WM_MoveWindow &rArr; WM__MoveWindow &rArr; _MoveDescendents &rArr;  _MoveDescendents (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestorOrSelf
+<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[3a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestorOrSelf
 <LI><a href="#[3a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestor
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocusOnPrevChild
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
@@ -5866,19 +5867,18 @@ Global Symbols
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> window.o(i.WINDOW_CreateUser)
 </UL>
 <P><STRONG><a name="[f3]"></a>WINDOW_CreateIndirect</STRONG> (Thumb, 60 bytes, Stack size 48 bytes, window.o(i.WINDOW_CreateIndirect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = WINDOW_CreateIndirect &rArr; WINDOW_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = WINDOW_CreateIndirect &rArr; WINDOW_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WINDOW_CreateUser
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> windowdlg.o(.constdata)
 </UL>
 <P><STRONG><a name="[3a9]"></a>WINDOW_CreateUser</STRONG> (Thumb, 100 bytes, Stack size 56 bytes, window.o(i.WINDOW_CreateUser))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = WINDOW_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = WINDOW_CreateUser &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__Init
@@ -5921,7 +5921,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1ba]"></a>WM_CreateWindowAsChild</STRONG> (Thumb, 324 bytes, Stack size 48 bytes, wm.o(i.WM_CreateWindowAsChild))
-<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
@@ -5947,28 +5947,29 @@ Global Symbols
 <P><STRONG><a name="[2a0]"></a>WM_Deactivate</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, wm.o(i.WM_Deactivate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = WM_Deactivate &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
+<BR>[Calls]<UL><LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
 </UL>
 <BR>[Called By]<UL><LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Select
 </UL>
 
 <P><STRONG><a name="[1b6]"></a>WM_DefaultProc</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, wm.o(i.WM_DefaultProc))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 168 + In Cycle
+<LI>Call Chain = WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetClientRectEx
 <LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbDialog
+<LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbBackWin
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WINDOW_Callback
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Callback
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_Callback
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbDialog
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_Callback
 </UL>
 
@@ -5986,7 +5987,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[229]"></a>WM_DeleteWindow</STRONG> (Thumb, 234 bytes, Stack size 24 bytes, wm.o(i.WM_DeleteWindow))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = WM_DeleteWindow &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = WM_DeleteWindow &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DeleteAssocTimer
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
@@ -6004,9 +6005,9 @@ Global Symbols
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Exec1Input
+<BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Exec1Input
 <LI><a href="#[3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DeleteAllChildren
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
 </UL>
 
 <P><STRONG><a name="[24d]"></a>WM_Exec</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, wm.o(i.WM_Exec))
@@ -6062,7 +6063,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[224]"></a>WM_GetClientWindow</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, wm_getclientwindow.o(i.WM_GetClientWindow))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_GetClientWindow &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_GetClientWindow &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 </UL>
@@ -6070,9 +6071,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1d1]"></a>WM_GetDesktopWindow</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, wm_getdesktopwindow.o(i.WM_GetDesktopWindow))
-<BR><BR>[Called By]<UL><LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitContext
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<BR><BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
 <LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CreateWindow
+<LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitContext
 <LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateStaticDevice
 </UL>
 
@@ -6122,12 +6123,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3c2]"></a>WM_GetId</STRONG> (Thumb, 26 bytes, Stack size 24 bytes, wm_getid.o(i.WM_GetId))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_GetId &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_GetId &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbDialog
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbDialog
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
 </UL>
 
 <P><STRONG><a name="[3ac]"></a>WM_GetParent</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, wm_getparent.o(i.WM_GetParent))
@@ -6183,13 +6184,13 @@ Global Symbols
 <P><STRONG><a name="[9e]"></a>WM_HandlePID</STRONG> (Thumb, 858 bytes, Stack size 144 bytes, wm_touch.o(i.WM_HandlePID))
 <BR><BR>[Stack]<UL><LI>Max Depth = 544<LI>Call Chain = WM_HandlePID &rArr; GUI_CURSOR_SetPositionEx &rArr; GUI_SPRITE_SetPosition &rArr; _SetPosition &rArr; _CreateBuffer &rArr; GUI_ALLOC_AllocNoInit &rArr; _Alloc &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__AddCriticalHandle
+<BR>[Calls]<UL><LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetLayerPosEx
+<LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__AddCriticalHandle
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetLayerPosEx
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageIfEnabled
 <LI><a href="#[3c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Screen2hWin
 <LI><a href="#[3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_PID__SetPrevState
@@ -6209,7 +6210,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[27d]"></a>WM_Init</STRONG> (Thumb, 184 bytes, Stack size 56 bytes, wm.o(i.WM_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = WM_Init &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = WM_Init &rArr; WM_CreateWindowAsChild &rArr; WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__AddCriticalHandle
 <LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SelectWindow
@@ -6236,8 +6237,8 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<BR>[Called By]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
 </UL>
 
 <P><STRONG><a name="[1cf]"></a>WM_InvalidateWindow</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, wm.o(i.WM_InvalidateWindow))
@@ -6245,7 +6246,15 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[36f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateRect
 </UL>
-<BR>[Called By]<UL><LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Inc
+<BR>[Called By]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
+<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
+<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
+<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
+<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
+<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Inc
 <LI><a href="#[372]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Dec
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbTimer
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
@@ -6254,14 +6263,6 @@ Global Symbols
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
 <LI><a href="#[27d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Init
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
-<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetText
-<LI><a href="#[37f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_SetFont
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
-<LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetRange
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetGIF
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_SetBMP
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
 <LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindowAndDescs
 <LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbInvalidateOne
@@ -6300,7 +6301,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3d6]"></a>WM_IsFocussable</STRONG> (Thumb, 58 bytes, Stack size 32 bytes, wm_isfocussable.o(i.WM_IsFocussable))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = WM_IsFocussable &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = WM_IsFocussable &rArr; WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[39f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
@@ -6336,24 +6337,24 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[327]"></a>WM_NotifyParent</STRONG> (Thumb, 16 bytes, Stack size 24 bytes, wm_notifyparent.o(i.WM_NotifyParent))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = WM_NotifyParent &rArr; WM_SendToParent &rArr;  WM__SendMessage (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Inc
+<BR>[Called By]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
+<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
+<LI><a href="#[371]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Inc
 <LI><a href="#[372]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Dec
 <LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IMAGE_Callback
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
-<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TEXT_Callback
 </UL>
 
 <P><STRONG><a name="[2b2]"></a>WM_OnKey</STRONG> (Thumb, 56 bytes, Stack size 40 bytes, wm_onkey.o(i.WM_OnKey))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_OnKey &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_OnKey &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
@@ -6367,7 +6368,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3cb]"></a>WM_ReleaseCapture</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, wm_setcapture.o(i.WM_ReleaseCapture))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_ReleaseCapture &rArr; WM__ReleaseCapture &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = WM_ReleaseCapture &rArr; WM__ReleaseCapture &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
@@ -6408,11 +6409,11 @@ Global Symbols
 <P><STRONG><a name="[3b0]"></a>WM_SelectWindow</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, wm.o(i.WM_SelectWindow))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = WM_SelectWindow &rArr; WM__SelectTopLevelLayer &rArr; GUI_SelectLayer &rArr; GUI_SelectLCD &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SelectTopLevelLayer
+<BR>[Calls]<UL><LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
+<LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SelectTopLevelLayer
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[2a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Paint
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
@@ -6421,16 +6422,16 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[39f]"></a>WM_SendMessage</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, wm.o(i.WM_SendMessage))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = WM_SendMessage &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
+<BR>[Called By]<UL><LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetId
+<LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
 <LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetEffect
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientWindow
-<LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetId
 </UL>
 
 <P><STRONG><a name="[226]"></a>WM_SendMessageNoPara</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, wm_sendmessagenopara.o(i.WM_SendMessageNoPara))
@@ -6440,26 +6441,25 @@ Global Symbols
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Paint1
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_threadR
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Paint1
 </UL>
 
 <P><STRONG><a name="[3b3]"></a>WM_SendToParent</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, wm_sendtoparent.o(i.WM_SendToParent))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64 + In Cycle
-<LI>Call Chain = WM_SendToParent &rArr;  WM__SendMessage (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetParent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<BR>[Called By]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 </UL>
 
 <P><STRONG><a name="[3de]"></a>WM_SetCapture</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, wm_setcapture.o(i.WM_SetCapture))
-<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = WM_SetCapture &rArr; WM__ReleaseCapture &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = WM_SetCapture &rArr; WM__ReleaseCapture &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
@@ -6477,7 +6477,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[39b]"></a>WM_SetFocus</STRONG> (Thumb, 158 bytes, Stack size 48 bytes, wm_setfocus.o(i.WM_SetFocus))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
@@ -6493,18 +6493,18 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[228]"></a>WM_SetFocusOnNextChild</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, wm_setfocusonnextchild.o(i.WM_SetFocusOnNextChild))
-<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = WM_SetFocusOnNextChild &rArr; _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = WM_SetFocusOnNextChild &rArr; _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetFocusOnNextChild
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WINDOW_Callback
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<BR>[Called By]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_CreateDialogBox
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WINDOW_Callback
 </UL>
 
 <P><STRONG><a name="[3a8]"></a>WM_SetFocusOnPrevChild</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, wm_setfocusonprevchild.o(i.WM_SetFocusOnPrevChild))
-<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = WM_SetFocusOnPrevChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = WM_SetFocusOnPrevChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
 <LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
@@ -6661,8 +6661,8 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientRectEx
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<BR>[Called By]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientRectEx
 </UL>
 
 <P><STRONG><a name="[3a0]"></a>WM__GetClientRectWin</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, wm.o(i.WM__GetClientRectWin))
@@ -6934,15 +6934,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[db]"></a>WM__Paint1</STRONG> (Thumb, 136 bytes, Stack size 56 bytes, wm.o(i.WM__Paint1))
-<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = WM__Paint1 &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = WM__Paint1 &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
+<BR>[Calls]<UL><LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
+<LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetDefault
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateStaticDevice
 </UL>
@@ -6975,10 +6975,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3d9]"></a>WM__SendMessage</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, wm__sendmessage.o(i.WM__SendMessage))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
@@ -6993,7 +6993,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3ca]"></a>WM__SendMessageIfEnabled</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, wm__sendmessageifenabled.o(i.WM__SendMessageIfEnabled))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = WM__SendMessageIfEnabled &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = WM__SendMessageIfEnabled &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsEnabled
@@ -7007,12 +7007,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 </UL>
-<BR>[Called By]<UL><LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
-<LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
+<BR>[Called By]<UL><LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessageNoPara
+<LI><a href="#[28f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Draw
 </UL>
 
 <P><STRONG><a name="[3b1]"></a>WM__SendMsgNoData</STRONG> (Thumb, 14 bytes, Stack size 24 bytes, wm.o(i.WM__SendMsgNoData))
-<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = WM__SendMsgNoData &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 </UL>
@@ -7022,7 +7022,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3f4]"></a>WM__SendPIDMessage</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, wm_touch.o(i.WM__SendPIDMessage))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = WM__SendPIDMessage &rArr; WM__SendMessageIfEnabled &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = WM__SendPIDMessage &rArr; WM__SendMessageIfEnabled &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageIfEnabled
@@ -7032,7 +7032,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3c9]"></a>WM__SendTouchMessage</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, wm_touch.o(i.WM__SendTouchMessage))
-<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = WM__SendTouchMessage &rArr; WM__SendPIDMessage &rArr; WM__SendMessageIfEnabled &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = WM__SendTouchMessage &rArr; WM__SendPIDMessage &rArr; WM__SendMessageIfEnabled &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
@@ -7175,8 +7175,8 @@ Global Symbols
 <P><STRONG><a name="[44e]"></a>isrSignalSet</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, rt_cmsis.o(i.isrSignalSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = isrSignalSet &rArr; isr_evt_set &rArr; rt_psq_enq &rArr; os_error &rArr; GUI_DispStringAt &rArr; GUI_DispString &rArr; GUI__DispLine &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[450]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isr_evt_set
-<LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tid2ptcb
+<BR>[Calls]<UL><LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tid2ptcb
+<LI><a href="#[450]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isr_evt_set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[455]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSignalSet
 </UL>
@@ -7369,10 +7369,10 @@ Global Symbols
 <LI><a href="#[45b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_switch_req
 <LI><a href="#[45a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_get_first
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
+<LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
 <LI><a href="#[466]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_wait
 <LI><a href="#[461]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_dly_wait
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
 </UL>
 
 <P><STRONG><a name="[45c]"></a>rt_chk_robin</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, rt_robin.o(i.rt_chk_robin))
@@ -7400,12 +7400,12 @@ Global Symbols
 <LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_put_prio
 <LI><a href="#[45a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_get_first
 </UL>
-<BR>[Called By]<UL><LI><a href="#[47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_prio
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
+<LI><a href="#[47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_prio
 <LI><a href="#[47a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_delete
 <LI><a href="#[478]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_create
 <LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
 <LI><a href="#[465]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_set
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
 </UL>
 
 <P><STRONG><a name="[461]"></a>rt_dly_wait</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rt_time.o(i.rt_dly_wait))
@@ -7455,7 +7455,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[45a]"></a>rt_get_first</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, rt_list.o(i.rt_get_first))
-<BR><BR>[Called By]<UL><LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
+<BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
+<LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
 <LI><a href="#[469]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_psh
 <LI><a href="#[45c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_chk_robin
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_systick
@@ -7465,7 +7466,6 @@ Global Symbols
 <LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
 <LI><a href="#[45f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_dispatch
 <LI><a href="#[458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_block
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
 </UL>
 
 <P><STRONG><a name="[47e]"></a>rt_init_mem</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, rt_memory.o(i.rt_init_mem))
@@ -7493,13 +7493,13 @@ Global Symbols
 <P><STRONG><a name="[469]"></a>rt_mbx_psh</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, rt_mailbox.o(i.rt_mbx_psh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = rt_mbx_psh &rArr; os_error &rArr; GUI_DispStringAt &rArr; GUI_DispString &rArr; GUI__DispLine &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[464]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ret_val2
+<BR>[Calls]<UL><LI><a href="#[457]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_error
+<LI><a href="#[464]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ret_val2
 <LI><a href="#[463]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_rmv_dly
 <LI><a href="#[46a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ret_val
 <LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_put_prio
 <LI><a href="#[45a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_get_first
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_alloc_box
-<LI><a href="#[457]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_error
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_pop_req
 </UL>
@@ -7583,7 +7583,9 @@ Global Symbols
 <P><STRONG><a name="[45d]"></a>rt_put_prio</STRONG> (Thumb, 54 bytes, Stack size 12 bytes, rt_list.o(i.rt_put_prio))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = rt_put_prio
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
+<LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
 <LI><a href="#[469]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_psh
 <LI><a href="#[462]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_psh
 <LI><a href="#[45e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_dec_dly
@@ -7593,8 +7595,6 @@ Global Symbols
 <LI><a href="#[47a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_delete
 <LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
 <LI><a href="#[45f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_dispatch
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
 </UL>
 
 <P><STRONG><a name="[460]"></a>rt_put_rdy_first</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, rt_list.o(i.rt_put_rdy_first))
@@ -7609,8 +7609,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[46e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_rmv_list
 <LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_put_prio
 </UL>
-<BR>[Called By]<UL><LI><a href="#[47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_prio
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
+<LI><a href="#[47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_prio
 </UL>
 
 <P><STRONG><a name="[46a]"></a>rt_ret_val</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, hal_cm.o(i.rt_ret_val))
@@ -7618,11 +7618,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[46f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ret_regs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
+<LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
 <LI><a href="#[469]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_psh
 <LI><a href="#[47a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_delete
 <LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
 </UL>
 
 <P><STRONG><a name="[464]"></a>rt_ret_val2</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, hal_cm.o(i.rt_ret_val2))
@@ -7638,13 +7638,13 @@ Global Symbols
 <P><STRONG><a name="[463]"></a>rt_rmv_dly</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, rt_list.o(i.rt_rmv_dly))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = rt_rmv_dly
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
+<LI><a href="#[46d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_sem_psh
 <LI><a href="#[469]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_psh
 <LI><a href="#[462]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_psh
 <LI><a href="#[47a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_delete
 <LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
 <LI><a href="#[465]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_set
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
 </UL>
 
 <P><STRONG><a name="[46e]"></a>rt_rmv_list</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, rt_list.o(i.rt_rmv_list))
@@ -7761,8 +7761,8 @@ Global Symbols
 <P><STRONG><a name="[df]"></a>svcDelay</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, rt_cmsis.o(i.svcDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = svcDelay &rArr; rt_dly_wait &rArr; rt_block &rArr; rt_put_dly
 </UL>
-<BR>[Calls]<UL><LI><a href="#[461]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_dly_wait
-<LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
+<BR>[Calls]<UL><LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
+<LI><a href="#[461]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_dly_wait
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osDelay)
 </UL>
@@ -7797,8 +7797,8 @@ Global Symbols
 <P><STRONG><a name="[e2]"></a>svcMessageGet</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, rt_cmsis.o(i.svcMessageGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = svcMessageGet &rArr; rt_mbx_wait &rArr; rt_dispatch &rArr; rt_put_prio
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
-<LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
+<BR>[Calls]<UL><LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
+<LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mbx_wait
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osMessageGet)
 </UL>
@@ -7814,33 +7814,33 @@ Global Symbols
 <P><STRONG><a name="[e4]"></a>svcMutexRelease</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, rt_cmsis.o(i.svcMutexRelease))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = svcMutexRelease &rArr; rt_mut_release &rArr; rt_dispatch &rArr; rt_put_prio
 </UL>
-<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
-<LI><a href="#[482]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_id2obj
+<BR>[Calls]<UL><LI><a href="#[482]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_id2obj
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_release
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osMutexRelease)
 </UL>
 <P><STRONG><a name="[e5]"></a>svcMutexWait</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, rt_cmsis.o(i.svcMutexWait))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = svcMutexWait &rArr; rt_mut_wait &rArr; rt_block &rArr; rt_put_dly
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
-<LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
+<BR>[Calls]<UL><LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
 <LI><a href="#[482]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_id2obj
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_mut_wait
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osMutexWait)
 </UL>
 <P><STRONG><a name="[e6]"></a>svcSignalSet</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, rt_cmsis.o(i.svcSignalSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = svcSignalSet &rArr; rt_evt_set &rArr; rt_dispatch &rArr; rt_put_prio
 </UL>
-<BR>[Calls]<UL><LI><a href="#[465]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_set
-<LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tid2ptcb
+<BR>[Calls]<UL><LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tid2ptcb
+<LI><a href="#[465]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_set
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osSignalSet)
 </UL>
 <P><STRONG><a name="[e7]"></a>svcSignalWait</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, rt_cmsis.o(i.svcSignalWait))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = svcSignalWait &rArr; rt_evt_wait &rArr; rt_block &rArr; rt_put_dly
 </UL>
-<BR>[Calls]<UL><LI><a href="#[466]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_wait
-<LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
+<BR>[Calls]<UL><LI><a href="#[47d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ms2tick
+<LI><a href="#[466]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_evt_wait
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osSignalWait)
 </UL>
@@ -7851,8 +7851,8 @@ Global Symbols
 <LI><a href="#[484]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_free_mem
 <LI><a href="#[483]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_alloc_mem
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcKernelInitialize
-<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadCreate
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcKernelInitialize
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osThreadCreate)
 </UL>
@@ -7867,9 +7867,9 @@ Global Symbols
 <P><STRONG><a name="[ea]"></a>svcThreadTerminate</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, rt_cmsis.o(i.svcThreadTerminate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = svcThreadTerminate &rArr; rt_tsk_delete &rArr; rt_stk_check &rArr; os_error &rArr; GUI_DispStringAt &rArr; GUI_DispString &rArr; GUI__DispLine &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_delete
+<BR>[Calls]<UL><LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tid2ptcb
+<LI><a href="#[47a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tsk_delete
 <LI><a href="#[484]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_free_mem
-<LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_tid2ptcb
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_cmsis.o(i.osThreadExit)
 </UL>
@@ -7900,9 +7900,9 @@ Global Symbols
 <P><STRONG><a name="[477]"></a>sysTimerTick</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, rt_cmsis.o(i.sysTimerTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 336<LI>Call Chain = sysTimerTick &rArr; isrMessagePut &rArr; isr_mbx_send &rArr; rt_psq_enq &rArr; os_error &rArr; GUI_DispStringAt &rArr; GUI_DispString &rArr; GUI__DispLine &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; WM__ActivateClipRect &rArr; _SetClipRectUserIntersect &rArr; LCD_SetClipRectEx &rArr; GUI__IntersectRects
 </UL>
-<BR>[Calls]<UL><LI><a href="#[457]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_error
-<LI><a href="#[44b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrMessagePut
+<BR>[Calls]<UL><LI><a href="#[44b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrMessagePut
 <LI><a href="#[488]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_insert
+<LI><a href="#[457]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_error
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_systick
 </UL>
@@ -7955,7 +7955,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbDialog
 </UL>
 
-<P><STRONG><a name="[95]"></a>_cbDialog</STRONG> (Thumb, 986 bytes, Stack size 32 bytes, windowdlg.o(i._cbDialog))
+<P><STRONG><a name="[95]"></a>_cbDialog</STRONG> (Thumb, 1012 bytes, Stack size 32 bytes, windowdlg.o(i._cbDialog))
 <BR><BR>[Stack]<UL><LI>Max Depth = 392<LI>Call Chain = _cbDialog &rArr; IMAGE_SetGIF &rArr; IMAGE__SetWindowSize &rArr; WM_SetSize &rArr; WM_ResizeWindow &rArr;  WM__UpdateChildPositions (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetId
@@ -8393,8 +8393,8 @@ Local Symbols
 <P><STRONG><a name="[ba]"></a>_DMA_AlphaBlending</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, lcdconf.o(i._DMA_AlphaBlending))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = _DMA_AlphaBlending &rArr; _DMA_AlphaBlendingBulk
 </UL>
-<BR>[Calls]<UL><LI><a href="#[400]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_AlphaBlendingBulk
-<LI><a href="#[3ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvertAlpha
+<BR>[Calls]<UL><LI><a href="#[3ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvertAlpha
+<LI><a href="#[400]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_AlphaBlendingBulk
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lcdconf.o(i.LCD_X_Config)
 </UL>
@@ -8409,8 +8409,8 @@ Local Symbols
 <P><STRONG><a name="[3f8]"></a>_DMA_Color2IndexBulk</STRONG> (Thumb, 46 bytes, Stack size 32 bytes, lcdconf.o(i._DMA_Color2IndexBulk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = _DMA_Color2IndexBulk &rArr; _DMA_ConvertColor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[403]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ConvertColor
-<LI><a href="#[402]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvertAlpha_SwapRB
+<BR>[Calls]<UL><LI><a href="#[402]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvertAlpha_SwapRB
+<LI><a href="#[403]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ConvertColor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Color2IndexBulk_M888_DMA2D
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Color2IndexBulk_M8888I_DMA2D
@@ -8423,15 +8423,15 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[401]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ExecOperation
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Color2IndexBulk
-<LI><a href="#[407]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Index2ColorBulk
+<BR>[Called By]<UL><LI><a href="#[407]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Index2ColorBulk
+<LI><a href="#[3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Color2IndexBulk
 </UL>
 
 <P><STRONG><a name="[404]"></a>_DMA_Copy</STRONG> (Thumb, 70 bytes, Stack size 40 bytes, lcdconf.o(i._DMA_Copy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _DMA_Copy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[401]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ExecOperation
-<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
+<BR>[Calls]<UL><LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
+<LI><a href="#[401]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ExecOperation
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_DrawBitmap16bpp
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_CopyRect
@@ -8447,19 +8447,19 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[401]"></a>_DMA_ExecOperation</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, lcdconf.o(i._DMA_ExecOperation))
-<BR><BR>[Called By]<UL><LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Fill
+<BR><BR>[Called By]<UL><LI><a href="#[408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_MixColorsBulk
+<LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Fill
 <LI><a href="#[405]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_DrawBitmapL8
 <LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
 <LI><a href="#[403]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ConvertColor
 <LI><a href="#[400]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_AlphaBlendingBulk
-<LI><a href="#[408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_MixColorsBulk
 </UL>
 
 <P><STRONG><a name="[406]"></a>_DMA_Fill</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, lcdconf.o(i._DMA_Fill))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = _DMA_Fill
 </UL>
-<BR>[Calls]<UL><LI><a href="#[401]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ExecOperation
-<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
+<BR>[Calls]<UL><LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
+<LI><a href="#[401]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ExecOperation
 </UL>
 <BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_FillRect
 </UL>
@@ -8467,8 +8467,8 @@ Local Symbols
 <P><STRONG><a name="[407]"></a>_DMA_Index2ColorBulk</STRONG> (Thumb, 46 bytes, Stack size 32 bytes, lcdconf.o(i._DMA_Index2ColorBulk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = _DMA_Index2ColorBulk &rArr; _DMA_ConvertColor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[403]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ConvertColor
-<LI><a href="#[402]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvertAlpha_SwapRB
+<BR>[Calls]<UL><LI><a href="#[402]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvertAlpha_SwapRB
+<LI><a href="#[403]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_ConvertColor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Index2ColorBulk_M888_DMA2D
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Index2ColorBulk_M8888I_DMA2D
@@ -8502,11 +8502,11 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[347]"></a>_GetPixelformat</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, lcdconf.o(i._GetPixelformat))
-<BR><BR>[Called By]<UL><LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Fill
-<LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
-<LI><a href="#[2df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_X_Config
+<BR><BR>[Called By]<UL><LI><a href="#[2df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_X_Config
 <LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_InitController
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_DrawBitmap8bpp
+<LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Fill
+<LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
 </UL>
 
 <P><STRONG><a name="[b2]"></a>_Index2ColorBulk_M1555I_DMA2D</STRONG> (Thumb, 28 bytes, Stack size 24 bytes, lcdconf.o(i._Index2ColorBulk_M1555I_DMA2D))
@@ -8540,31 +8540,31 @@ Local Symbols
 <P><STRONG><a name="[3ff]"></a>_InvertAlpha</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, lcdconf.o(i._InvertAlpha))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _InvertAlpha
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_AlphaBlending
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_MixColorsBulk
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_MixColorsBulk
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_AlphaBlending
 </UL>
 
 <P><STRONG><a name="[402]"></a>_InvertAlpha_SwapRB</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, lcdconf.o(i._InvertAlpha_SwapRB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _InvertAlpha_SwapRB
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Color2IndexBulk
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_GetpPalConvTable
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LCD_GetpPalConvTable
 <LI><a href="#[407]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Index2ColorBulk
+<LI><a href="#[3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Color2IndexBulk
 </UL>
 
 <P><STRONG><a name="[ad]"></a>_LCD_CopyBuffer</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, lcdconf.o(i._LCD_CopyBuffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = _LCD_CopyBuffer &rArr; _DMA_Copy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
-<LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<BR>[Calls]<UL><LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lcdconf.o(i.LCD_X_Config)
 </UL>
 <P><STRONG><a name="[ae]"></a>_LCD_CopyRect</STRONG> (Thumb, 140 bytes, Stack size 56 bytes, lcdconf.o(i._LCD_CopyRect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = _LCD_CopyRect &rArr; _DMA_Copy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
-<LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<BR>[Calls]<UL><LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lcdconf.o(i.LCD_X_Config)
 </UL>
@@ -8587,28 +8587,28 @@ Local Symbols
 <P><STRONG><a name="[b1]"></a>_LCD_DrawBitmap16bpp</STRONG> (Thumb, 116 bytes, Stack size 64 bytes, lcdconf.o(i._LCD_DrawBitmap16bpp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = _LCD_DrawBitmap16bpp &rArr; _DMA_Copy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
-<LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<BR>[Calls]<UL><LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<LI><a href="#[404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Copy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lcdconf.o(i.LCD_X_Config)
 </UL>
 <P><STRONG><a name="[b0]"></a>_LCD_DrawBitmap8bpp</STRONG> (Thumb, 114 bytes, Stack size 64 bytes, lcdconf.o(i._LCD_DrawBitmap8bpp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = _LCD_DrawBitmap8bpp &rArr; _DMA_DrawBitmapL8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[405]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_DrawBitmapL8
-<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
+<BR>[Calls]<UL><LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
 <LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<LI><a href="#[405]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_DrawBitmapL8
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lcdconf.o(i.LCD_X_Config)
 </UL>
 <P><STRONG><a name="[af]"></a>_LCD_FillRect</STRONG> (Thumb, 148 bytes, Stack size 48 bytes, lcdconf.o(i._LCD_FillRect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = _LCD_FillRect &rArr; GUI_GetDrawMode &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Fill
-<LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDevFunc
+<BR>[Calls]<UL><LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDevFunc
 <LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[26c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetDrawMode
 <LI><a href="#[431]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetBufferSize
+<LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DMA_Fill
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> lcdconf.o(i.LCD_X_Config)
 <LI> lcdconf.o(i._LCD_FillRect)
@@ -8626,18 +8626,18 @@ Local Symbols
 <P><STRONG><a name="[352]"></a>_LCD_InitController</STRONG> (Thumb, 414 bytes, Stack size 80 bytes, lcdconf.o(i._LCD_InitController))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = _LCD_InitController &rArr; LCD_X_Init &rArr; HAL_RCCEx_PeriphCLKConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<BR>[Calls]<UL><LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSizeEx
+<LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSizeEx
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetSwapXYEx
+<LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetBitsPerPixelEx
+<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
+<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_X_Init
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ProgramLineEvent
 <LI><a href="#[30a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_Init
 <LI><a href="#[434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_EnableCLUT
 <LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ConfigLayer
 <LI><a href="#[435]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_ConfigCLUT
-<LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSizeEx
-<LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSizeEx
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetSwapXYEx
-<LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetBitsPerPixelEx
-<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetPixelformat
 </UL>
 <BR>[Called By]<UL><LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_X_DisplayDriver
 </UL>
@@ -8728,9 +8728,9 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[44f]"></a>rt_tid2ptcb</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, rt_cmsis.o(i.rt_tid2ptcb))
-<BR><BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcThreadTerminate
+<BR><BR>[Called By]<UL><LI><a href="#[44e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrSignalSet
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcThreadTerminate
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcSignalSet
-<LI><a href="#[44e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrSignalSet
 </UL>
 
 <P><STRONG><a name="[488]"></a>rt_timer_insert</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, rt_cmsis.o(i.rt_timer_insert))
@@ -8993,9 +8993,9 @@ Local Symbols
 <P><STRONG><a name="[27a]"></a>_InitContext</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, gui_core.o(i._InitContext))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _InitContext
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColor
+<BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDesktopWindow
+<LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColor
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetBkColor
-<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDesktopWindow
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
 </UL>
@@ -9079,9 +9079,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DEVICE__GetpDriver
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSize
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSize
-<LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSizeEx
+<BR>[Called By]<UL><LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSizeEx
 <LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSizeEx
 <LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetSwapXYEx
 <LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetBitsPerPixelEx
@@ -9092,6 +9090,8 @@ Local Symbols
 <LI><a href="#[332]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetMirrorXEx
 <LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetMaxValue
 <LI><a href="#[335]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetNumColorsEx
+<LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSize
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSize
 </UL>
 
 <P><STRONG><a name="[33a]"></a>_GetMaxValue</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, lcd_getex.o(i._GetMaxValue))
@@ -9373,19 +9373,19 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> guidrv_lin_24.o(.constdata)
 </UL>
 <P><STRONG><a name="[1b3]"></a>_OnButtonPressed</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, button.o(i._OnButtonPressed))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = _OnButtonPressed &rArr; WIDGET_OrState &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = _OnButtonPressed &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_OrState
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
-<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
 </UL>
 
 <P><STRONG><a name="[1b4]"></a>_OnButtonReleased</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, button.o(i._OnButtonReleased))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = _OnButtonReleased &rArr; WIDGET_AndState &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = _OnButtonReleased &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
@@ -9393,17 +9393,17 @@ Local Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
-<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouchDefault
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
 </UL>
 
 <P><STRONG><a name="[10]"></a>_OnTouchDefault</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, button.o(i._OnTouchDefault))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = _OnTouchDefault &rArr; _OnButtonReleased &rArr; WIDGET_AndState &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = _OnTouchDefault &rArr; _OnButtonReleased &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
-<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
+<BR>[Calls]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonReleased
 <LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnButtonPressed
+<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
+<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> button.o(.data)
 </UL>
@@ -9500,14 +9500,15 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_AddDecMin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_CreateUser
-<LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<BR>[Called By]<UL><LI><a href="#[36a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_SetValue
+<LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PROGBAR_CreateUser
 </UL>
 
 <P><STRONG><a name="[370]"></a>_OnTouch</STRONG> (Thumb, 216 bytes, Stack size 40 bytes, slider.o(i._OnTouch))
-<BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = _OnTouch &rArr; WM_SetCapture &rArr; WM__ReleaseCapture &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = _OnTouch &rArr; SLIDER_SetValue &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
+<BR>[Calls]<UL><LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
+<LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
 <LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCapture
 <LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
 <LI><a href="#[3a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetWindowSizeX
@@ -9516,7 +9517,6 @@ Local Symbols
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_SetValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLIDER_Callback
 </UL>
@@ -9564,7 +9564,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[3ba]"></a>_Exec1Input</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, wm.o(i._Exec1Input))
-<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = _Exec1Input &rArr; GUI_PollKeyMsg &rArr; WM_OnKey &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = _Exec1Input &rArr; WM_DeleteWindow &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_PollKeyMsg
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
@@ -9705,13 +9705,13 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[c2]"></a>_cbBackWin</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, wm.o(i._cbBackWin))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = _cbBackWin &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = _cbBackWin &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DesktopHandle2Index
+<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[3e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DesktopHandle2Index
 <LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetBkColor
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_StoreKey
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> wm.o(i.WM_Init)
 </UL>
@@ -9728,14 +9728,14 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 248 + In Cycle
 <LI>Call Chain = _GetDialogItem &rArr;  _GetDialogItem (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
+<BR>[Calls]<UL><LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetId
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetId
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
-<LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDialogItem
+<BR>[Called By]<UL><LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDialogItem
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDialogItem
 </UL>
 
 <P><STRONG><a name="[46f]"></a>rt_ret_regs</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, hal_cm.o(i.rt_ret_regs))
@@ -9814,10 +9814,10 @@ Local Symbols
 <P><STRONG><a name="[40d]"></a>_DrawBitmap_RLE</STRONG> (Thumb, 580 bytes, Stack size 88 bytes, gui_bmp.o(i._DrawBitmap_RLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = _DrawBitmap_RLE &rArr; LCD_DrawBitmap &rArr; LCD_FillRect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawPixel
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
+<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawPixel
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
 <LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_BMP__ReadPalette
 <LI><a href="#[213]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_BMP__ReadData
 </UL>
@@ -9927,9 +9927,9 @@ Local Symbols
 <P><STRONG><a name="[9c]"></a>_DrawFromDataBlock</STRONG> (Thumb, 444 bytes, Stack size 128 bytes, gui_gif.o(i._DrawFromDataBlock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = _DrawFromDataBlock &rArr; GUI_GIF__GetNextByte &rArr; _GetNextCode &rArr; _GetDataBlock &rArr; GUI_GIF__ReadData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTable
+<BR>[Calls]<UL><LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTable
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColorIndex
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
 <LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetPixelIndex
 <LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetBkColorIndex
 <LI><a href="#[25f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GIF__ReadData
@@ -10313,7 +10313,10 @@ Local Symbols
 <P><STRONG><a name="[29e]"></a>_CreateStaticDevice</STRONG> (Thumb, 308 bytes, Stack size 56 bytes, guidev_staticdevices.o(i._CreateStaticDevice))
 <BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = _CreateStaticDevice &rArr; WM_SetSize &rArr; WM_ResizeWindow &rArr;  WM__UpdateChildPositions (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Paint1
+<BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDesktopWindow
+<LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSize
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSize
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Paint1
 <LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetSize
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_SetOrg
 <LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Select
@@ -10321,9 +10324,6 @@ Local Symbols
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
-<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDesktopWindow
-<LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetYSize
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetXSize
 <LI><a href="#[28a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__CreateFixed
 <LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowOrgX
 <LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__AlphaPreserveTrans
@@ -10492,7 +10492,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[3da]"></a>WM__ReleaseCapture</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, wm_setcapture.o(i.WM__ReleaseCapture))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = WM__ReleaseCapture &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = WM__ReleaseCapture &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 </UL>
@@ -10509,7 +10509,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[3e0]"></a>_SetFocusOnNextChild</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, wm_setfocusonnextchild.o(i._SetFocusOnNextChild))
-<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateRectEx &rArr; WM__InvalidateRect &rArr;  WM__InvalidateRect (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM__SendMessage &rArr; WM_DefaultProc &rArr;  WM_SendToParent (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetTopLevelLayer
 <LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
@@ -10563,8 +10563,8 @@ Local Symbols
 <P><STRONG><a name="[24a]"></a>_DrawGradient</STRONG> (Thumb, 382 bytes, Stack size 88 bytes, gui_drawgradient.o(i._DrawGradient))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = _DrawGradient &rArr; GUI_GetColor &rArr; GUI_Lock &rArr; GUI_DEVICE_UnlinkTaskDevices
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColor
-<LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<BR>[Calls]<UL><LI><a href="#[1ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColor
 <LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetColor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawGradientH
@@ -10662,15 +10662,15 @@ Local Symbols
 <P><STRONG><a name="[2a9]"></a>_WriteToActiveOpaque_8</STRONG> (Thumb, 824 bytes, Stack size 168 bytes, guidev_writetoactiveopaque.o(i._WriteToActiveOpaque_8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = _WriteToActiveOpaque_8 &rArr; GUI_ALLOC_AllocNoInit &rArr; _Alloc &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
+<BR>[Calls]<UL><LI><a href="#[41c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetpfColor2IndexEx
+<LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD__DrawBitmap_1bpp
+<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
+<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
 <LI><a href="#[2e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetpfIndex2ColorEx
 <LI><a href="#[2e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBitsPerPixelEx
-<LI><a href="#[41c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetpfColor2IndexEx
-<LI><a href="#[361]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD__DrawBitmap_1bpp
-<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_GetDataPtr
 <LI><a href="#[3fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Convert8
 <LI><a href="#[3fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Convert16
@@ -10681,12 +10681,12 @@ Local Symbols
 <P><STRONG><a name="[2aa]"></a>_WriteToActiveOpaque_HT</STRONG> (Thumb, 826 bytes, Stack size 144 bytes, guidev_writetoactiveopaque.o(i._WriteToActiveOpaque_HT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = _WriteToActiveOpaque_HT &rArr; GUI_ALLOC_AllocNoInit &rArr; _Alloc &rArr; _InitOnce &rArr; _EnlargeBlocks &rArr;  _Alloc (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
+<BR>[Calls]<UL><LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
+<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_UnlockH
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_LockH
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
 <LI><a href="#[2e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBitsPerPixelEx
-<LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
 </UL>
 <BR>[Called By]<UL><LI><a href="#[285]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__WriteToActiveOpaque
 </UL>

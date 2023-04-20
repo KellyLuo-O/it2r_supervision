@@ -1,0 +1,5 @@
+réception : donnée à 1 octet
+
+couple : commence par 01xx xxxx
+vitesse : commence par 10xx xxxx
+reservoir : commence par 11xx xxxx

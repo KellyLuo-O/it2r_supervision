@@ -22,6 +22,7 @@ extern ARM_DRIVER_USART Driver_USART6;
 	
 	char couple, vitesse, reservoir;
 	int temperature;
+	char feux;
 
 	WM_HWIN hDlg;
 	
@@ -253,6 +254,11 @@ void UART_threadT (void const *argument) {
 			tab[0]=200-temperature;
 			Driver_USART6.Send(tab,1);
 			osSignalWait(0x0002, osWaitForever);
+			
+			tab[0] = 0xF0 | feux;
+			Driver_USART6.Send(tab,1);
+			osSignalWait(0x0002, osWaitForever);
+			
 			osDelay(100);
 		}
 }
