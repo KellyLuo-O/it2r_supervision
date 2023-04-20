@@ -3,3 +3,9 @@ réception : donnée à 1 octet
 couple : commence par 01xx xxxx
 vitesse : commence par 10xx xxxx
 reservoir : commence par 11xx xxxx
+
+transmission des feux : trame de 1 octet qui commence par 1111 xxxx
+clignotant gauche : 0xF1
+clignotant droit : 0xF2
+croisement gauche : 0xF4
+croisement droit : 0xF8
