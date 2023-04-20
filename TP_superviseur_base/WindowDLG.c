@@ -1049,7 +1049,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
 	extern char couple;
 	extern char vitesse;
 	extern char reservoir;
-	
+	extern int temperature;
   // USER END
 
   switch (pMsg->MsgId) {
@@ -1198,10 +1198,19 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
 		PROGBAR_SetValue    (hItem, reservoir);
 		
 		hItem = WM_GetDialogItem(pMsg->hWin, ID_SLIDER_0);
-		SLIDER_SetValue    (hItem, 50);
+		SLIDER_SetValue    (hItem, 100);
+		SLIDER_SetRange(hItem, 0, 200);
 				
     // USER END
     break;
+		case WM_USER:
+						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_0);
+						PROGBAR_SetValue    (hItem, couple);
+						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_1);
+						PROGBAR_SetValue    (hItem, vitesse);
+						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_2);
+						PROGBAR_SetValue    (hItem, reservoir);
+						break;
   case WM_NOTIFY_PARENT:
     Id    = WM_GetId(pMsg->hWinSrc);
     NCode = pMsg->Data.v;
@@ -1218,6 +1227,8 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
         break;
       case WM_NOTIFICATION_VALUE_CHANGED:
         // USER START (Optionally insert code for reacting on notification message)
+				hItem = WM_GetDialogItem(pMsg->hWin, ID_SLIDER_0);
+				temperature = SLIDER_GetValue(hItem);
         // USER END
         break;
       // USER START (Optionally insert additional code for further notification handling)
@@ -1228,8 +1239,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
-					hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_0);
-					PROGBAR_SetValue    (hItem, vitesse);
+
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:

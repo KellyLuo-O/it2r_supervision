@@ -21,8 +21,9 @@ extern ARM_DRIVER_USART Driver_USART6;
 
 	
 	char couple, vitesse, reservoir;
-	
-	//WM_HWIN Rdlg;
+	int temperature;
+
+	WM_HWIN hdlg;
 	
 
 
@@ -184,14 +185,22 @@ void UART_threadR (void const *argument);                             // thread 
 osThreadId ID_UART_threadR;                                          // thread id
 osThreadDef (UART_threadR, osPriorityNormal, 1, 0);                   // thread object
 
+void UART_threadT (void const *argument);                             // thread function Transmit
+osThreadId ID_UART_threadT;                                          // thread id
+osThreadDef (UART_threadT, osPriorityNormal, 1, 0);                   // thread object
+
 
 void usart_cb(uint32_t event)
 {
-	switch (event)
+
+		if ((event & ARM_USART_EVENT_RECEIVE_COMPLETE) == ARM_USART_EVENT_RECEIVE_COMPLETE) 
 		{
-		case ARM_USART_EVENT_RECEIVE_COMPLETE :
-			osSignalSet(ID_UART_threadR, 0x0002); break;
+			osSignalSet(ID_UART_threadR, 0x0002);
 		}
+		if ((event & ARM_USART_EVENT_TX_COMPLETE) == ARM_USART_EVENT_TX_COMPLETE) 
+		{
+			osSignalSet(ID_UART_threadT, 0x0002);
+		}	
 }
 
 void Init_UART(void){
@@ -202,7 +211,7 @@ void Init_UART(void){
 							ARM_USART_STOP_BITS_1		|
 							ARM_USART_PARITY_NONE		|
 							ARM_USART_FLOW_CONTROL_NONE,
-							9600);
+							1528);   //36770
 	Driver_USART6.Control(ARM_USART_CONTROL_TX,1);
 	Driver_USART6.Control(ARM_USART_CONTROL_RX,1);
 }
@@ -211,35 +220,42 @@ void Init_UART(void){
 // Tache reception UART
 
 void UART_threadR (void const *argument) {
-	unsigned char tab[1];
-	unsigned char etat;
 
+	unsigned char tab[1];
 	while (1) 
 		{
-			
 			Driver_USART6.Receive(tab,1);	
 			osSignalWait(0x0002, osWaitForever);
 			
-			
-			etat = tab[0] & 0xC0;
-			switch (etat)
+			switch (tab[0] & 0xC0)
 			{
-				case 0x00:
-					couple = (tab[0]&0x0F)*100/64;
-					break;
 				case 0x40:
-					vitesse = (tab[0]&0x0F)*100/64;
+					couple = (tab[0]&0x3F)*100/64;
 					break;
 				case 0x80:
-					reservoir = (tab[0]&0x0F)*100/64;
+					vitesse = (tab[0]&0x3F)*100/64;
+					break;
+				case 0xC0:
+					reservoir = (tab[0]&0x3F)*100/64;
 					break;			
+				default : break;
 			}
-			//vitesse = 50;
-			osDelay(100);
-			//WM_SendMessageNoPara(Rdlg, WM_USER);
+			WM_SendMessageNoPara(hdlg, WM_USER);
 		}
 }
 
+void UART_threadT (void const *argument) {
+	
+	unsigned char tab[1];
+	
+	while (1) 
+		{
+			tab[0]=200-temperature;
+			Driver_USART6.Send(tab,1);
+			osSignalWait(0x0002, osWaitForever);
+			osDelay(100);
+		}
+}
 
 /*********************************************************************
 *
@@ -255,6 +271,7 @@ int main (void) {
   // create 'thread' functions that start executing,
   Init_GUIThread();
 	ID_UART_threadR = osThreadCreate (osThread(UART_threadR), NULL);
+	ID_UART_threadT = osThreadCreate (osThread(UART_threadT), NULL);
 
   osKernelStart ();                         // start thread execution 
 	
