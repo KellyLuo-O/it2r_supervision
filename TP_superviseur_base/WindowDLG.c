@@ -1203,14 +1203,7 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
 				
     // USER END
     break;
-		case WM_USER:
-						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_0);
-						PROGBAR_SetValue    (hItem, couple);
-						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_1);
-						PROGBAR_SetValue    (hItem, vitesse);
-						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_2);
-						PROGBAR_SetValue    (hItem, reservoir);
-						break;
+		
   case WM_NOTIFY_PARENT:
     Id    = WM_GetId(pMsg->hWinSrc);
     NCode = pMsg->Data.v;
@@ -1297,6 +1290,14 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
     }
     break;
   // USER START (Optionally insert additional message handling)
+		case WM_USER:
+						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_0);
+						PROGBAR_SetValue    (hItem, couple);
+						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_1);
+						PROGBAR_SetValue    (hItem, vitesse);
+						hItem = WM_GetDialogItem(pMsg->hWin, ID_PROGBAR_2);
+						PROGBAR_SetValue    (hItem, reservoir);
+						break;
   // USER END
   default:
     WM_DefaultProc(pMsg);

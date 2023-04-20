@@ -23,7 +23,7 @@ extern ARM_DRIVER_USART Driver_USART6;
 	char couple, vitesse, reservoir;
 	int temperature;
 
-	WM_HWIN hdlg;
+	WM_HWIN hDlg;
 	
 
 
@@ -151,7 +151,7 @@ static void CPU_CACHE_Enable (void) {
 
 void GUIThread (void const *argument) {
 
-	WM_HWIN hDlg;
+	
 	
 	MPU_Config ();
 	CPU_CACHE_Enable();                       /* Enable the CPU Cache           */
@@ -240,7 +240,7 @@ void UART_threadR (void const *argument) {
 					break;			
 				default : break;
 			}
-			WM_SendMessageNoPara(hdlg, WM_USER);
+			WM_SendMessageNoPara(hDlg, WM_USER);
 		}
 }
 
